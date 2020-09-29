@@ -41,16 +41,19 @@ class AddCEP extends Component {
 
     render() {
         return (
-            <div>
-                <Link to="/zip-code-list">Lista de CEP's</Link>
-                <h2>Inserindo um CEP</h2>
+            <div className="container">
+                <h3>Inserindo um CEP</h3>
                 <form onSubmit={this.register}>
                     {this.state.error && <p>{this.state.error}</p>}
-                    <label for="zipCode">CEP:</label>
-                    <input name="zipCode" type="number" min="100000" max="999999" value={this.state.zipCode} onChange={this.alterZipCode} required/><br/>
-                    <label for="city">Cidade:</label>
-                    <input name="city" type="text" value={this.city} onChange={this.alterCity} required/><br/>
-                    <button type="submit">Salvar</button>
+                    <div className="form-group">
+                        <label for="zipCode">CEP:</label>
+                        <input id="zipCode" className="form-control form-control-sm" name="zipCode" type="number" min="100000" max="999999" value={this.state.zipCode} onChange={this.alterZipCode} required/>
+                    </div>
+                    <div className="form-group">
+                        <label for="city">Cidade:</label>
+                        <input id="city" className="form-control form-control-sm" name="city" type="text" value={this.city} onChange={this.alterCity} required/>
+                    </div>
+                    <button type="submit" className="btn btn-success btn-sm">Salvar</button>
                 </form>
             </div>
         );

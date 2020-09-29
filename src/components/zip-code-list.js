@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
+import "../bootstrap.min.css";
 
 class ZipCodeList extends Component {
     constructor(props) {
@@ -12,22 +13,33 @@ class ZipCodeList extends Component {
     componentDidMount() {
         let url = "http://127.0.0.1:1940/zipcodes";
         fetch(url).then((response) => response.json()).then((zipCodes) => {
-            let state = this.state;
-            state.zipCodes = zipCodes;
-            this.setState(state);
+            this.setState({zipCodes: zipCodes});
         });
     }
 
     render() {
         return (
             <div className="container">
-                <Link to="/">Adicionar CEP</Link>
                 <h3>Listagem de CEP's</h3>
-                {this.state.zipCodes.map((zipCode) => {
-                    return (
-                        <p key={zipCode._id}>CEP: {zipCode.zipCode} / Cidade: {zipCode.city}</p>
-                    );
-                })}
+                <table className="table table-striped table-sm">
+                    <thead className="thead-dark">
+                        <tr>
+                            <th>CEP</th>
+                            <th>Cidade</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {this.state.zipCodes.map((zipCode) => {
+                            return (
+                                <tr>
+                                    <th>{zipCode.zipCode}</th>
+                                    <th>{zipCode.city}</th>
+                                </tr>
+                            );
+                        })}
+                    </tbody>
+                </table>
+                <Link to="/add-cep" className="btn btn-success btn-sm">Adicionar CEP</Link>
             </div>
         );
     }

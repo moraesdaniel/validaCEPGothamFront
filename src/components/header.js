@@ -1,10 +1,13 @@
 import React, {Component} from "react";
+import {Link} from "react-router-dom";
+import "../header.css";
+
 
 class Header extends Component {
     render() {
         return (
-            <div>
-                <h3>Header do ValidaCEPGotham</h3>
+            <div className="header">
+                <Link to="/">Validador de CEP's de Gotham City</Link>
             </div>
         );
     }
