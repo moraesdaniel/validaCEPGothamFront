@@ -1,16 +1,15 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom";
 
 class AddCEP extends Component {
     constructor(props) {
         super(props);
         this.state = {
             error: "",
-            zipCode: null,
+            zipCode: 0,
             city: ""
         };
 
-        this.register = this.register.bind(this);
+        this.saveZipCode = this.saveZipCode.bind(this);
         this.alterZipCode = this.alterZipCode.bind(this);
         this.alterCity = this.alterCity.bind(this);
     }
@@ -25,11 +24,21 @@ class AddCEP extends Component {
         this.setState({zipCode: zipCode});
     }
 
-    register(event) {
+    saveZipCode(event) {
         let url = "http://127.0.0.1:1940/zipcode";
-        fetch(url, {zipCode: this.state.zipCode, city: this.state.city}).then((response) => response.json()).then((responseJSON) => {
+        fetch(url,  {
+                        method: "POST",
+                        headers: {
+                            "Accept": "application/json",
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            zipCode: this.state.zipCode, 
+                            city: this.state.city
+                        })
+                    }).then((response) => response.json()).then((responseJSON) => {
+            console.log(responseJSON);
             let state = this.state;
-            console.log();
             if (responseJSON.error) {
                 state.error = responseJSON.error;
             }
@@ -43,14 +52,14 @@ class AddCEP extends Component {
         return (
             <div className="container">
                 <h3>Inserindo um CEP</h3>
-                <form onSubmit={this.register}>
+                <form onSubmit={this.saveZipCode}>
                     {this.state.error && <p>{this.state.error}</p>}
                     <div className="form-group">
-                        <label for="zipCode">CEP:</label>
+                        <label>CEP:</label>
                         <input id="zipCode" className="form-control form-control-sm" name="zipCode" type="number" min="100000" max="999999" value={this.state.zipCode} onChange={this.alterZipCode} required/>
                     </div>
                     <div className="form-group">
-                        <label for="city">Cidade:</label>
+                        <label>Cidade:</label>
                         <input id="city" className="form-control form-control-sm" name="city" type="text" value={this.city} onChange={this.alterCity} required/>
                     </div>
                     <button type="submit" className="btn btn-success btn-sm">Salvar</button>
