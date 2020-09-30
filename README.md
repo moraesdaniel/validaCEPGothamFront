@@ -8,6 +8,12 @@ Tabela de conteúdos
 	* [Tecnologias utilizadas](#tecnologias)
 	* [Como executar o projeto](#como-executar)
 <!--te-->
+
+### Tecnologias
+
+As seguintes tecnologias foram utilizadas na construção do projeto:
+- [Node.js](https://nodejs.org/en/)
+- [React](https://pt-br.reactjs.org/)
 	
 <h4 align="center"> 
 	🚧  Validador CEPs Gotham 🚀 Em construção...  🚧
