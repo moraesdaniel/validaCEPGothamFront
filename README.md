@@ -5,17 +5,8 @@
 Tabela de conteúdos
 =================
 <!--ts-->
-   * [Sobre](#Sobre)
-   * [Tabela de Conteudo](#tabela-de-conteudo)
-   * [Instalação](#instalacao)
-   * [Como usar](#como-usar)
-      * [Pre Requisitos](#pre-requisitos)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
-   * [Tests](#testes)
    * [Tecnologias](#tecnologias)
+   * [Como executar](#como-executar)
 <!--te-->
 
 ### Tecnologias
@@ -23,6 +14,9 @@ Tabela de conteúdos
 As seguintes tecnologias foram utilizadas na construção do projeto:
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
+
+### Como executar
+Executando
 	
 <h4 align="center"> 
 	🚧  Validador CEPs Gotham 🚀 Em construção...  🚧
