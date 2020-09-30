@@ -16,7 +16,10 @@ As seguintes tecnologias foram utilizadas na construção do projeto:
 - [React](https://pt-br.reactjs.org/)
 
 ### Como executar
-Executando
+- Inicialize o servidor do MongoDB
+	- Com o prompt de comando, vá até a pasta de instalação do Mongo, que deve ser algo parecido com c:\Program Files\MongoDB\Server\4.4\bin
+	- Dentro da pasta, digite o comando `mongod --dbpath <caminho do database>`
+- Inicialize o back-end
 	
 <h4 align="center"> 
 	🚧  Validador CEPs Gotham 🚀 Em construção...  🚧
