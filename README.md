@@ -3,10 +3,19 @@
 ## Esta é a interface de usuários de um validador de CEPs especialmente desenvolvido para Gotham City.
 
 Tabela de conteúdos
-===================
+=================
 <!--ts-->
-	* [Tecnologias utilizadas](#Tecnologias)
-	* [Como executar o projeto](#como-executar)
+   * [Sobre](#Sobre)
+   * [Tabela de Conteudo](#tabela-de-conteudo)
+   * [Instalação](#instalacao)
+   * [Como usar](#como-usar)
+      * [Pre Requisitos](#pre-requisitos)
+      * [Local files](#local-files)
+      * [Remote files](#remote-files)
+      * [Multiple files](#multiple-files)
+      * [Combo](#combo)
+   * [Tests](#testes)
+   * [Tecnologias](#tecnologias)
 <!--te-->
 
 ### Tecnologias
