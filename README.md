@@ -5,7 +5,7 @@
 Tabela de conteúdos
 ===================
 <!--ts-->
-	* [Tecnologias utilizadas](#tecnologias)
+	* [Tecnologias utilizadas](#Tecnologias)
 	* [Como executar o projeto](#como-executar)
 <!--te-->
 
