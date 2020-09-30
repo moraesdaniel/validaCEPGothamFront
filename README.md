@@ -7,6 +7,7 @@ Tabela de conteúdos
 <!--ts-->
 	* [Tecnologias utilizadas](#tecnologias)
 	* [Como executar o projeto](#como-executar)
+<!--te-->
 	
 <h4 align="center"> 
 	🚧  Validador CEPs Gotham 🚀 Em construção...  🚧
