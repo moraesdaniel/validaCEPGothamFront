@@ -1,6 +1,5 @@
 import React, {Component} from "react";
 import {Link} from "react-router-dom";
-import "../bootstrap.min.css";
 
 class ZipCodeList extends Component {
     constructor(props) {
@@ -20,7 +19,14 @@ class ZipCodeList extends Component {
     render() {
         return (
             <div className="container">
-                <h3>Listagem de CEP's</h3>
+                <div className="form-row">
+                    <div className="col">
+                        <h3>Listagem de CEP's</h3>
+                    </div>
+                    <div className="col" align="right">
+                        <Link to="/add-cep" className="btn btn-success btn-sm">Adicionar CEP</Link>
+                    </div>
+                </div>
                 <table className="table table-striped table-sm">
                     <thead className="thead-dark">
                         <tr>
@@ -39,7 +45,6 @@ class ZipCodeList extends Component {
                         })}
                     </tbody>
                 </table>
-                <Link to="/add-cep" className="btn btn-success btn-sm">Adicionar CEP</Link>
             </div>
         );
     }
