@@ -7,6 +7,8 @@ Tabela de conteúdos
 <!--ts-->
    * [Tecnologias](#tecnologias)
    * [Como executar](#como-executar)
+      * [NodeJS](#nodejs)
+      * [Front-end](#front-end)			
 <!--te-->
 
 ### Tecnologias
@@ -14,13 +16,14 @@ Tabela de conteúdos
 As seguintes tecnologias foram utilizadas na construção do projeto:
 - [Node.js](https://nodejs.org/en/)
 - [React](https://pt-br.reactjs.org/)
+- [Bootstrap](https://getbootstrap.com/)
 
 ### Como executar
-- Inicialize o servidor do MongoDB
-	- Com o prompt de comando, vá até a pasta de instalação do Mongo, que deve ser algo parecido com c:\Program Files\MongoDB\Server\4.4\bin
-	- Dentro da pasta, digite o comando `mongod --dbpath <caminho do database>`
-- Inicialize o back-end
-	
-<h4 align="center"> 
-	🚧  Validador CEPs Gotham 🚀 Em construção...  🚧
-</h4>
+
+#### NodeJS
+- Para rodar o projeto do front-end, é obrigatório que o projeto do back-end já esteja rodando. Para isso visite a página do mesmo [aqui](https://github.com/moraesdaniel/validaCEPGothamBack). Lá você encontrará como instalar o NodeJS.
+
+#### Front-end
+- Realize o clone do projeto em uma pasta de sua escolha.
+- Navegue com seu prompt de comando até a pasta do projeto e digite o comando `npm install`. Com este comando simples, o Node irá baixar todas as dependências necessárias para rodar seu projeto.
+- Agora basta executar o comando `npm start` e seu front-end será aberto no seu navegador.
