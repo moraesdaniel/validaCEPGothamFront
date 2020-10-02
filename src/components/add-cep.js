@@ -35,7 +35,7 @@ class AddCEP extends Component {
                             "Content-Type": "application/json"
                         },
                         body: JSON.stringify({
-                            zipCode: this.state.zipCode, 
+                            zipCode: parseInt(this.state.zipCode), 
                             city: this.state.city
                         })
                     }).then((response) => response.json()).then((responseJSON) => {
@@ -62,11 +62,8 @@ class AddCEP extends Component {
                 <hr />
                 <form onSubmit={this.saveZipCode}>
                     {this.state.error &&
-                        <div className="alert alert-warning" role="alert">
-                            <button type="button" className="close" data-dismiss="alert">
-                                <span>&times;</span>
-                            </button>
-                            <strong>{this.state.error}</strong>
+                        <div className="alert alert-warning">
+                            {this.state.error}
                         </div>
                     }
                     {this.state.msg &&
